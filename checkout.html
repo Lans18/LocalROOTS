@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your purchase securely on Local Roots Market.">
+    <title>Checkout - Local Roots Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%23f5f1ea' stroke='%234a5d3f' stroke-width='2'/%3E%3Cpath d='M100 60 Q80 80 70 100 Q80 90 90 95 Q85 105 80 115 Q90 110 100 115 Q110 110 120 115 Q115 105 110 95 Q120 90 130 100 Q120 80 100 60' fill='%235a7c47'/%3E%3Cpath d='M95 115 L95 140 M105 115 L105 140 M100 100 L85 125 M100 100 L115 125' stroke='%235a7c47' stroke-width='2' fill='none'/%3E%3Cpath d='M100 140 Q80 145 70 155 Q90 150 100 155 Q110 150 130 155 Q120 145 100 140' fill='%236b4e3d'/%3E%3Ctext x='100' y='180' font-family='Playfair Display, serif' font-size='18' font-weight='700' text-anchor='middle' fill='%232d3a2e'%3ELOCAL ROOTS%3C/text%3E%3C/svg%3E" alt="Local Roots Market">
+                <span>Local Roots Market</span>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="vendors.html">Become a Vendor</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Secure Checkout</h1>
+            <p>Complete your order in just a few steps</p>
+        </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+        <div class="container">
+            <!-- Progress Indicator -->
+            <div class="checkout-progress">
+                <div class="progress-step active">
+                    <div class="step-circle">1</div>
+                    <span>Shipping</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-circle">2</div>
+                    <span>Payment</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-circle">3</div>
+                    <span>Review</span>
+                </div>
+            </div>
+
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-main">
+                    <!-- Step 1: Shipping Information -->
+                    <div class="checkout-step" id="step1">
+                        <h2>Shipping Information</h2>
+
+                        <form class="checkout-form">
+                            <div class="delivery-options">
+                                <h3>Delivery Method</h3>
+                                <div class="option-card">
+                                    <label>
+                                        <input type="radio" name="delivery" value="delivery" checked>
+                                        <div class="option-content">
+                                            <div>
+                                                <strong>📦 Home Delivery</strong>
+                                                <p>Delivered within 2-3 business days</p>
+                                            </div>
+                                            <span class="option-price">$6.99</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="option-card">
+                                    <label>
+                                        <input type="radio" name="delivery" value="pickup">
+                                        <div class="option-content">
+                                            <div>
+                                                <strong>📍 Pickup Location</strong>
+                                                <p>Next-day pickup at partner locations</p>
+                                            </div>
+                                            <span class="option-price">Free</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-section">
+                                <h3>Contact Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="checkoutFirstName">First Name *</label>
+                                        <input type="text" id="checkoutFirstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="checkoutLastName">Last Name *</label>
+                                        <input type="text" id="checkoutLastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkoutEmail">Email Address *</label>
+                                    <input type="email" id="checkoutEmail" placeholder="you@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="checkoutPhone">Phone Number *</label>
+                                    <input type="tel" id="checkoutPhone" placeholder="(555) 123-4567" required>
+                                </div>
+                            </div>
+
+                            <div class="form-section" id="shippingAddress">
+                                <h3>Shipping Address</h3>
+                                <div class="form-group">
+                                    <label for="address">Street Address *</label>
+                                    <input type="text" id="address" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apartment">Apartment, Suite, etc. (Optional)</label>
+                                    <input type="text" id="apartment">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">City *</label>
+                                        <input type="text" id="city" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State *</label>
+                                        <input type="text" id="state" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="zipCode">ZIP Code *</label>
+                                        <input type="text" id="zipCode" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-section" id="pickupLocation" style="display: none;">
+                                <h3>Pickup Location</h3>
+                                <div class="form-group">
+                                    <label for="pickupSelect">Select Location *</label>
+                                    <select id="pickupSelect">
+                                        <option value="">Choose a pickup location</option>
+                                        <option value="main">Main Street Community Center - 123 Main St</option>
+                                        <option value="library">Public Library - 456 Oak Ave</option>
+                                        <option value="farmers">Farmers Market Plaza - 789 Market St</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-primary btn-large" onclick="goToStep(2)">Continue to Payment</button>
+                        </form>
+                    </div>
+
+                    <!-- Step 2: Payment Information -->
+                    <div class="checkout-step hidden" id="step2">
+                        <h2>Payment Information</h2>
+
+                        <form class="checkout-form">
+                            <div class="payment-methods">
+                                <h3>Payment Method</h3>
+                                <div class="option-card">
+                                    <label>
+                                        <input type="radio" name="payment" value="card" checked>
+                                        <div class="option-content">
+                                            <strong>💳 Credit/Debit Card</strong>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="option-card">
+                                    <label>
+                                        <input type="radio" name="payment" value="apple">
+                                        <div class="option-content">
+                                            <strong>🍎 Apple Pay</strong>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="option-card">
+                                    <label>
+                                        <input type="radio" name="payment" value="google">
+                                        <div class="option-content">
+                                            <strong>🔍 Google Pay</strong>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-section" id="cardDetails">
+                                <h3>Card Details</h3>
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number *</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry">Expiration Date *</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" placeholder="123" maxlength="4" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardName">Name on Card *</label>
+                                    <input type="text" id="cardName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary" onclick="goToStep(1)">← Back</button>
+                                <button type="button" class="btn btn-primary btn-large" onclick="goToStep(3)">Review Order</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Step 3: Review & Confirm -->
+                    <div class="checkout-step hidden" id="step3">
+                        <h2>Review Your Order</h2>
+
+                        <div class="review-section">
+                            <div class="review-card">
+                                <h3>Shipping Details</h3>
+                                <p><strong>John Doe</strong></p>
+                                <p>john@example.com</p>
+                                <p>(555) 123-4567</p>
+                                <p>123 Main Street<br>Your Town, ST 12345</p>
+                                <button class="link-btn" onclick="goToStep(1)">Edit</button>
+                            </div>
+
+                            <div class="review-card">
+                                <h3>Payment Method</h3>
+                                <p>💳 Credit Card</p>
+                                <p>•••• •••• •••• 3456</p>
+                                <button class="link-btn" onclick="goToStep(2)">Edit</button>
+                            </div>
+
+                            <div class="review-card">
+                                <h3>Order Items</h3>
+                                <div class="review-items" id="reviewItems">
+                                    <!-- Items will be populated by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="agreeTerms" required>
+                                I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" onclick="goToStep(2)">← Back</button>
+                            <button type="button" class="btn btn-primary btn-large" onclick="placeOrder()">Place Order</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <aside class="checkout-sidebar">
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="summary-items" id="summaryItems">
+                            <div class="summary-item">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%235a7c47'/%3E%3Ctext x='50' y='60' font-size='40' text-anchor='middle' fill='%23fff'%3E🥬%3C/text%3E%3C/svg%3E" alt="Product">
+                                <div class="item-info">
+                                    <h4>Organic Mixed Greens</h4>
+                                    <p>Green Acres Farm</p>
+                                    <p>Qty: 1</p>
+                                </div>
+                                <span class="item-price">$8.99</span>
+                            </div>
+                            <div class="summary-item">
+                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23c89b6f'/%3E%3Ctext x='50' y='60' font-size='40' text-anchor='middle' fill='%23fff'%3E🥖%3C/text%3E%3C/svg%3E" alt="Product">
+                                <div class="item-info">
+                                    <h4>Artisan Sourdough Bread</h4>
+                                    <p>Artisan Bakery Co.</p>
+                                    <p>Qty: 1</p>
+                                </div>
+                                <span class="item-price">$6.50</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-totals">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span>$15.49</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery</span>
+                                <span id="deliveryFee">$6.99</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax</span>
+                                <span>$1.85</span>
+                            </div>
+                            <div class="summary-row total">
+                                <strong>Total</strong>
+                                <strong id="orderTotal">$24.33</strong>
+                            </div>
+                        </div>
+
+                        <div class="promo-code">
+                            <input type="text" placeholder="Enter promo code">
+                            <button class="btn btn-secondary btn-small">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="secure-checkout">
+                        <p>🔒 Secure Checkout</p>
+                        <p class="small">Your payment information is encrypted and secure</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Local Roots Market</h3>
+                    <p>Strengthening community through local commerce.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop All Products</a></li>
+                        <li><a href="vendors.html">Become a Vendor</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📧 info@localrootsmarket.com</li>
+                        <li>📞 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Local Roots Market. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

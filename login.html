@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login or create an account on Local Roots Market to start shopping local products.">
+    <title>Login - Local Roots Market</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%23f5f1ea' stroke='%234a5d3f' stroke-width='2'/%3E%3Cpath d='M100 60 Q80 80 70 100 Q80 90 90 95 Q85 105 80 115 Q90 110 100 115 Q110 110 120 115 Q115 105 110 95 Q120 90 130 100 Q120 80 100 60' fill='%235a7c47'/%3E%3Cpath d='M95 115 L95 140 M105 115 L105 140 M100 100 L85 125 M100 100 L115 125' stroke='%235a7c47' stroke-width='2' fill='none'/%3E%3Cpath d='M100 140 Q80 145 70 155 Q90 150 100 155 Q110 150 130 155 Q120 145 100 140' fill='%236b4e3d'/%3E%3Ctext x='100' y='180' font-family='Playfair Display, serif' font-size='18' font-weight='700' text-anchor='middle' fill='%232d3a2e'%3ELOCAL ROOTS%3C/text%3E%3C/svg%3E" alt="Local Roots Market">
+                <span>Local Roots Market</span>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="vendors.html">Become a Vendor</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="nav-btn active">Login</a></li>
+                <li><a href="#" class="cart-icon" id="cartIcon">🛒 <span class="cart-count" id="cartCount">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Login Form -->
+                <div class="auth-box" id="loginBox">
+                    <h2>Welcome Back</h2>
+                    <p class="auth-subtitle">Login to access your account</p>
+
+                    <form class="auth-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" name="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+                        </div>
+
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-auth">
+                        <button class="social-btn google-btn">
+                            <span class="social-icon">🔍</span>
+                            Continue with Google
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <span class="social-icon">📘</span>
+                            Continue with Facebook
+                        </button>
+                    </div>
+
+                    <p class="auth-switch">
+                        Don't have an account? <a href="#" id="showRegister">Create one</a>
+                    </p>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-box hidden" id="registerBox">
+                    <h2>Create Account</h2>
+                    <p class="auth-subtitle">Join our community of local shoppers</p>
+
+                    <form class="auth-form" id="registerForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerEmail">Email Address</label>
+                            <input type="email" id="registerEmail" name="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="registerPassword">Password</label>
+                            <input type="password" id="registerPassword" name="password" placeholder="Create a password" required minlength="8">
+                            <small>At least 8 characters</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="newsletter">
+                                Send me updates about local products and vendors
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="terms" required>
+                                I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-auth">
+                        <button class="social-btn google-btn">
+                            <span class="social-icon">🔍</span>
+                            Sign up with Google
+                        </button>
+                        <button class="social-btn facebook-btn">
+                            <span class="social-icon">📘</span>
+                            Sign up with Facebook
+                        </button>
+                    </div>
+
+                    <p class="auth-switch">
+                        Already have an account? <a href="#" id="showLogin">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Local Roots Market</h3>
+                    <p>Strengthening community through local commerce. Fresh products from your neighbors, delivered with care.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop All Products</a></li>
+                        <li><a href="vendors.html">Become a Vendor</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html#faq">FAQ</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Shipping & Delivery</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>📧 info@localrootsmarket.com</li>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📍 123 Main Street<br>Your Town, ST 12345</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Local Roots Market. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="terms.html">Terms of Service</a>
+                    <span>|</span>
+                    <a href="accessibility.html">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
