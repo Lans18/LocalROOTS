@@ -73,7 +73,7 @@ body {
 }
 
 img {
-    max-width: 100%;
+    max-width: fit-content;
     height: auto;
     display: block;
 }
