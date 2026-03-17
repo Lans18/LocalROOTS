@@ -12,7 +12,7 @@ const products = [
         vendor: 'Green Acres Farm',
         vendorId: 'greenacres',
         rating: 4.8,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23e8f4ea\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🥬%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23e8f4ea%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%A5%AC%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: true,
         features: ['organic', 'local', 'seasonal']
     },
@@ -24,7 +24,7 @@ const products = [
         vendor: 'Artisan Bakery Co.',
         vendorId: 'artisan',
         rating: 5.0,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23f5f1ea\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🥖%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23f5f1ea%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%A5%96%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: false,
         features: ['local', 'handmade']
     },
@@ -36,7 +36,7 @@ const products = [
         vendor: 'Valley View Dairy',
         vendorId: 'valley',
         rating: 4.9,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23fff9e6\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🥚%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23fff9e6%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%A5%9A%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: true,
         features: ['organic', 'local']
     },
@@ -48,7 +48,7 @@ const products = [
         vendor: 'Crafted by Hand',
         vendorId: 'crafted',
         rating: 4.7,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23e8dff5\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🧼%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23e8dff5%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%A7%BC%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: true,
         features: ['organic', 'handmade', 'local']
     },
@@ -60,7 +60,7 @@ const products = [
         vendor: 'Sunrise Organics',
         vendorId: 'sunrise',
         rating: 4.9,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23fff4d6\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🍯%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23fff4d6%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%8D%AF%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: true,
         features: ['organic', 'local']
     },
@@ -72,7 +72,7 @@ const products = [
         vendor: 'Green Acres Farm',
         vendorId: 'greenacres',
         rating: 4.8,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23ffe8e8\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🍅%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23ffe8e8%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%8D%85%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: true,
         features: ['organic', 'local', 'seasonal']
     },
@@ -84,7 +84,7 @@ const products = [
         vendor: 'Artisan Bakery Co.',
         vendorId: 'artisan',
         rating: 5.0,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23f5e6d3\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🥐%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23f5e6d3%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%A5%90%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: false,
         features: ['local', 'handmade']
     },
@@ -96,7 +96,7 @@ const products = [
         vendor: 'Valley View Dairy',
         vendorId: 'valley',
         rating: 4.7,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23f0f8ff\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🥛%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23f0f8ff%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%A5%9B%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: true,
         features: ['organic', 'local']
     },
@@ -108,7 +108,7 @@ const products = [
         vendor: 'Crafted by Hand',
         vendorId: 'crafted',
         rating: 4.9,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23f5e6d3\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🧺%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23f5e6d3%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%A7%BA%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: false,
         features: ['handmade', 'local']
     },
@@ -120,7 +120,7 @@ const products = [
         vendor: 'Sunrise Organics',
         vendorId: 'sunrise',
         rating: 4.6,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23f5f1ea\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🌾%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23f5f1ea%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%8C%BE%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: true,
         features: ['organic', 'local']
     },
@@ -132,7 +132,7 @@ const products = [
         vendor: 'Green Acres Farm',
         vendorId: 'greenacres',
         rating: 5.0,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23ffe8f0\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🍓%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23ffe8f0%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%8D%93%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: true,
         features: ['organic', 'local', 'seasonal']
     },
@@ -144,7 +144,7 @@ const products = [
         vendor: 'Artisan Bakery Co.',
         vendorId: 'artisan',
         rating: 4.8,
-        image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Crect fill=\'%23e8e0f5\' width=\'200\' height=\'200\'/%3E%3Ctext x=\'100\' y=\'120\' font-size=\'80\' text-anchor=\'middle\'%3E🧁%3C/text%3E%3C/svg%3E',
+        image: 'data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Crect%20fill%3D%22%23e8e0f5%22%20width%3D%22200%22%20height%3D%22200%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22120%22%20font-size%3D%2280%22%20text-anchor%3D%22middle%22%3E%F0%9F%A7%81%3C%2Ftext%3E%3C%2Fsvg%3E',
         organic: false,
         features: ['local', 'handmade']
     }
