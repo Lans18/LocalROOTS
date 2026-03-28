@@ -187,18 +187,18 @@ function renderProducts() {
     }
 
     productsGrid.innerHTML = filteredProducts.map(product => `
-        <div class="product-card">
-            <img src="${product.image}" alt="${product.name}" class="product-image">
+        <div class="product-card" role="article" aria-label="${sanitizeHTML(product.name)} by ${sanitizeHTML(product.vendor)}">
+            <img src="${product.image}" alt="${sanitizeHTML(product.name)}" class="product-image" loading="lazy">
             <div class="product-info">
                 <div class="product-category">${getCategoryName(product.category)}</div>
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-vendor">${product.vendor}</p>
-                <div class="product-rating">
+                <h3 class="product-name">${sanitizeHTML(product.name)}</h3>
+                <p class="product-vendor">${sanitizeHTML(product.vendor)}</p>
+                <div class="product-rating" aria-label="Rating ${product.rating} out of 5 stars">
                     ${'⭐'.repeat(Math.floor(product.rating))}
-                    <span>(${product.rating})</span>
+                    <span>${product.rating}/5</span>
                 </div>
-                <div class="product-price">$${product.price.toFixed(2)}</div>
-                <button class="add-to-cart" onclick="handleAddToCart('${product.id}')">
+                <div class="product-price" aria-label="Price ${formatCurrency(product.price)}">${formatCurrency(product.price)}</div>
+                <button class="add-to-cart" onclick="handleAddToCart('${product.id}')" aria-label="Add ${sanitizeHTML(product.name)} to cart">
                     Add to Cart
                 </button>
             </div>
@@ -304,23 +304,27 @@ function initSearch() {
     const searchInput = document.getElementById('searchInput');
 
     if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase();
-
+        // Debounce search to improve performance
+        const debouncedSearch = debounce((searchTerm) => {
             if (searchTerm === '') {
                 applyFilters();
                 return;
             }
 
+            const lowerSearchTerm = searchTerm.toLowerCase();
             filteredProducts = products.filter(product => {
-                return product.name.toLowerCase().includes(searchTerm) ||
-                       product.vendor.toLowerCase().includes(searchTerm) ||
-                       product.category.toLowerCase().includes(searchTerm) ||
-                       getCategoryName(product.category).toLowerCase().includes(searchTerm);
+                return product.name.toLowerCase().includes(lowerSearchTerm) ||
+                       product.vendor.toLowerCase().includes(lowerSearchTerm) ||
+                       product.category.toLowerCase().includes(lowerSearchTerm) ||
+                       getCategoryName(product.category).toLowerCase().includes(lowerSearchTerm);
             });
 
             sortProducts();
             renderProducts();
+        }, 300);
+
+        searchInput.addEventListener('input', (e) => {
+            debouncedSearch(e.target.value.toLowerCase());
         });
     }
 }

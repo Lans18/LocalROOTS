@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
@@ -53,6 +56,8 @@
         </div>
     </section>
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- Featured Categories -->
     <section class="featured-categories">
         <div class="container">
@@ -176,19 +181,22 @@
     </section>
 
     <!-- Newsletter -->
-    <section class="newsletter">
+    <section class="newsletter" aria-label="Newsletter signup">
         <div class="container">
             <div class="newsletter-content">
                 <h2>Stay Connected</h2>
                 <p>Get weekly updates on new vendors, seasonal products, and community events</p>
-                <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                <form class="newsletter-form" id="newsletterForm" novalidate>
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address" aria-required="true">
+                        <button type="submit" class="btn btn-primary" aria-label="Subscribe to newsletter">Subscribe</button>
+                    </div>
                 </form>
                 <p class="newsletter-disclaimer">We respect your privacy. Unsubscribe at any time.</p>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -244,6 +252,7 @@
         </div>
     </footer>
 
+    <script src="utils.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
